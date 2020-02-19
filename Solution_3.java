@@ -49,24 +49,21 @@ public class Solution_3 {
 
   //与HashMap法同原理，将HashMap建立的高速K-V存取转化为了通过indexOf获取
   public static int lengthOfLongestSubstring3(String s) {
-    int i = 0;
-    int flag = 0;
-    int length = 0;
-    int result = 0;
-    while (i < s.length()) {
-      int pos = s.indexOf(s.charAt(i),flag);
-      if (pos < i) {
+    int current = 0, start = 0, length = 0, result = 0;
+    while (current < s.length()) {
+      int tmp = s.indexOf(s.charAt(current),start);
+      if (tmp < current) {
         if (length > result) {
           result = length;
         }
-        if (result >= s.length() - pos - 1) {
+        if (result >= s.length() - tmp - 1) {
           return result;
         }
-        length = i - pos - 1;
-        flag = pos + 1;
+        start = tmp + 1;
+        length = current - start;
       }
       length++;
-      i++;
+      current++;
     }
     return length;
   }
