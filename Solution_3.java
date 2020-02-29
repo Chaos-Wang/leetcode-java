@@ -47,7 +47,7 @@ public class Solution_3 {
     return ans;
   }
 
-  //与HashMap法同原理，将HashMap建立的高速K-V存取转化为了通过indexOf获取
+  //与HashMap同理，将HashMap建立的高速K-V存取转化为了通过indexOf获取
   public static int lengthOfLongestSubstring3(String s) {
     int current = 0, start = 0, length = 0, result = 0;
     while (current < s.length()) {
