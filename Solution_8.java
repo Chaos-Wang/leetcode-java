@@ -5,6 +5,8 @@ package leetcode.java;
  * @version 1.0
  * @date 2020/3/1 14:44
  */
+
+//在第七题基础上添加字符串处理即可
 public class Solution_8 {
 
 	public int myAtoi(String str) {
