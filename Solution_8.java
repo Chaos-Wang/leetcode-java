@@ -12,7 +12,7 @@ public class Solution_8 {
 	public int myAtoi(String str) {
 		int len = str.length();
 
-		// 去除前导空格
+		// 去除空格
 		int index = 0;
 		while (index < len) {
 			if (str.charAt(index) != ' ') {
@@ -30,7 +30,6 @@ public class Solution_8 {
 		char firstChar = str.charAt(index);
 		if (firstChar == '+') {
 			index++;
-			sign = 1;
 		} else if (firstChar == '-') {
 			index++;
 			sign = -1;

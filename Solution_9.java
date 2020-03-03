@@ -5,6 +5,7 @@ package leetcode.java;
  * @version 1.0
  * @date 2020/3/2 23:10
  */
+
 public class Solution_9 {
 	public boolean IsPalindrome(int x) {
 		//负数不会是回文数，且除0外，若最后一位是0，则不是回文数
