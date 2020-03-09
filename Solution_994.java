@@ -22,15 +22,17 @@ public class Solution_994 {
 	static int[][] dir = { {-1,0},{1,0},{0,-1},{0,1} };
 
 	public int orangesRotting(int[][] grid) {
-		int R = grid.length;
+		int R = grid.length;1
 		int C = grid[0].length;
 		int minute = 0;
 		Queue<Pos> queue = new LinkedList<>();
 
 		for (int i = 0; i < R; i++) {
-			for (int j = 0; j < C; j++)
-				if (grid[i][j] == 2)
-					queue.add(new Pos(i, j, minute));
+			for (int j = 0; j < C; j++) {
+				if ( grid[ i ][ j ] == 2 ) {
+					queue.add( new Pos( i, j, minute ) );
+				}
+			}
 		}
 		while (!queue.isEmpty()) {
 			Pos pos = queue.poll();
